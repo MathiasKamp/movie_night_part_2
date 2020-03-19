@@ -6,7 +6,7 @@
         public string act_fname { get; set; }
         public string act_lname { get; set; }
 
-
+        // dette er en kommentar
         public Actor()
         {
             
