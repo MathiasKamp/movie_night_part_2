@@ -9,10 +9,11 @@ namespace movie_night_part_2
 {
     public static class ServerManager
     {
+        // connection string to connect to database
         private static string cs =
             @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MoviesDB_1;Integrated Security=True";
 
-
+        // method to insert a sql new actor into actor table
         public static Actor InsertActor(Actor a)
         {
             string insertString = "insert into actor (act_fname, act_lname) values ('john', 'hitler');";
@@ -29,7 +30,7 @@ namespace movie_night_part_2
             return a;
         }
 
-
+        // method to insert a new movie into movie table
         public static Movie InsertMovie(Movie m)
         {
             string insertString =
@@ -47,6 +48,7 @@ namespace movie_night_part_2
             return m;
         }
 
+        // method to insert a new genre into genre table
         public static Genre InsertGenre(Genre g)
         {
             string insertString = "insert into genre (gen_type) values ('Science Fiction')";
@@ -61,7 +63,7 @@ namespace movie_night_part_2
 
             return g;
         }
-
+        // method to update actor, it will update act_fname, act_lname column
         public static Actor UpdateActorName (Actor a)
         {
             string insertString = "update actor set act_fname = 'Matte', act_lname = 'Kamp' where act_fname like '%Mathias%'";
@@ -77,6 +79,7 @@ namespace movie_night_part_2
             return a;
         }
 
+        // method to delete an actor from actor table with the act_fname 'Matte'
         public static Actor DeleteActor(Actor a)
         {
             string insertString = "delete actor where act_fname = 'Matte'";
